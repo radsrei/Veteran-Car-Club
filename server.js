@@ -25,10 +25,10 @@ try {
 
  Membro.associate = (models) => {
     Veiculos.hasMany(models.Veiculos, 
-        { foreignKey: 'matr_professor', as: 'professores'})
+        { foreignKey: 'id', as: 'veiculos'})
 
-    Curso.hasMany(models.Turma, 
-        { foreignKey: 'id_turma', as: 'turmas'})    
+    Membro.hasMany(models.Membro, 
+        { foreignKey: 'id', as: 'membro'})    
 } 
 
 
