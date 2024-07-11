@@ -8,13 +8,13 @@ router.delete('/eventos/:id', deleteEventos)
 // export default router
 
 
-const express = require('express');
+// const express = require('express');
 const router = express.Router();
 
 // get all
 router.get('/', (req, res, next) => {
     res.status(200).send({
-        mensagem: 'GET na rota de pedidos.'
+        mensagem: 'GET nos Eventos.'
     });
 });
 
@@ -26,7 +26,7 @@ router.post('/', (req, res, next) => {
     };
 
     res.status(201).send({
-        message: 'Pedido criado com sucesso.',
+        message: 'Evento criado com sucesso.',
         newOrder: order
     });
 });
@@ -49,14 +49,14 @@ router.get('/:id', (req, res, next) => {
 // update one
 router.patch('/', (req, res, next) => {
     res.status(200).send({
-        mensagem: 'Pedido atualizado com sucesso.'
+        mensagem: 'Evento atualizado com sucesso.'
     });
 });
 
 // delete one
 router.delete('/', (req, res, next) => {
     res.status(200).send({
-        mensagem: 'Pedido removido com sucesso.'
+        mensagem: 'Evento removido com sucesso.'
     });
 });
 

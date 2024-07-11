@@ -1,22 +1,26 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import routeEventos from './Routes/routeEventos.js'
+import routeFinanceiro  from './Routes/routeFinanceiro.js'
+import routeMembros from './Routes/routeMembros.js'
+import routeVeiculos from './Routes/routeVeiculos.js'
+
+import express from "express"   
+import cors from "cors"
+import db from "./config/database.js"
+
 
 const app = express();
-
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/Veteran', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+try {
+    await db.authenticate()
+    console.log("Conexão com o MySQL estabelecida!")
+} catch (error) {
+    console.log("Conexão com o MySQL NÃO estabelecida!", error)
+}
 
-const routeEventos = require('./Routes/routeEventos.js');
-const routeFinanceiro  = require('./Routes/routeFinanceiro.js');
-const routeMembros = require('./Routes/routeMembros.js');
-const routeVeiculos = require('./Routes/routeVeiculos.js');
+
+
 
 app.use('/api/veiculos', routeVeiculos);
 app.use('/api/eventos', routeEventos);
