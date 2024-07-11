@@ -2,6 +2,7 @@ create database veteran_car;
 
 CREATE TABLE evento (
     id int PRIMARY KEY,
+    nome VARCHAR(255),
     local VARCHAR(255),
     endereco VARCHAR(255),
     data DATE,
@@ -10,6 +11,7 @@ CREATE TABLE evento (
 );
 
 CREATE TABLE financeiro (
+    id int PRIMARY KEY,
     movimento DECIMAL(10,2),
     saldo DECIMAL(10,2),
     descricao VARCHAR(255),
