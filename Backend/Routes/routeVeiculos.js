@@ -1,5 +1,5 @@
 import express from 'express'
-import {getVeiculos, createVeiculosgetVeiculos, updateVeiculosgetVeiculos, deleteVeiculosgetVeiculos} from '../Controllers/ContVeiculosgetVeiculos.js'
+import {getVeiculos, createVeiculos, updateVeiculos, deleteVeiculos} from '../Controllers/ContVeiculosgetVeiculos.js'
 
 
 const router = express.Router()

@@ -1,7 +1,7 @@
 import express from 'express'
 import {getMembros, createMembros, updateMembros, deleteMembros} from '../Controllers/ContMembros.js'
 
-
+const router = express.Router()
 
 router.get('/membros', getMembros)
 router.post('/membros',createMembros)
