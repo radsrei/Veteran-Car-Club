@@ -1,5 +1,5 @@
 import express from 'express'
-import {getEventos, createEventos, updateEventos, deleteEventos} from '../Controllers/ContEventos.js'
+import {getEventos, createEventos, updateEventos, deleteEventos} from '../Controllers/ControllerEventos.js'
 
 const router = express.Router()
 

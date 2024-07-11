@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('../mysql').pool;
 
-
-
 // get all
 router.get('/', (req, res, next) => {
     mysql.getConnection((error, conn) => {

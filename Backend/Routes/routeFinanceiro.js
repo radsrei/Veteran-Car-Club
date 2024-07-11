@@ -1,5 +1,5 @@
 import express from 'express'
-import {getFinanceiro, createFinanceiro, updateFinanceiro, deleteFinanceiro} from '../Controllers/ContFinanceiro.js'
+import {getFinanceiro, createFinanceiro, updateFinanceiro, deleteFinanceiro} from '../Controllers/ControllerFinanceiro.js'
 
 
 const router = express.Router()
