@@ -38,7 +38,9 @@ app.use('/api/eventos', routeEventos);
 app.use('/api/financeiro', routeFinanceiro);
 app.use('/api/membros', routeMembros);
 
- const PORT = process.env.PORT || 5000;
- app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+Membro.belongsTo(Veiculos, { foreignKey: 'id', as: 'veiculos'})
 
-// server.listen(5000, () => console.log("servidor em execução em http://localhost:5000"))
+//  const PORT = process.env.PORT || 5000;
+//  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+app.listen(5000, () => console.log("servidor em execução em http://localhost:5000"))
