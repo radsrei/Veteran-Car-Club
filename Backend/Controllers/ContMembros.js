@@ -50,23 +50,23 @@ router.post('/', (req, res, next) => {
     });
 });
 
-// get one
-router.get('/:id', (req, res, next) => {
-    const id = req.params.id;
+// // get one
+// router.get('/:id', (req, res, next) => {
+//     const id = req.params.id;
 
-    mysql.getConnection((error, conn) => {
-        if (error) return res.status(500).send({ error: error });
-        conn.query(
-            'SELECT * FROM membro WHERE id = ?',
-            [id],
-            (error, result, fields) => {
-                if (error) return res.status(500).send({ error: error });
+//     mysql.getConnection((error, conn) => {
+//         if (error) return res.status(500).send({ error: error });
+//         conn.query(
+//             'SELECT * FROM membro WHERE id = ?',
+//             [id],
+//             (error, result, fields) => {
+//                 if (error) return res.status(500).send({ error: error });
                 
-                res.status(200).send({ response: result });
-            }
-        );
-    });
-});
+//                 res.status(200).send({ response: result });
+//             }
+//         );
+//     });
+// });
 
 // update one
 router.patch('/', (req, res, next) => {
