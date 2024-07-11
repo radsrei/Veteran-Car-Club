@@ -1,0 +1,63 @@
+h1 {
+    color: #678169;
+    margin-left: 5%;
+}
+
+.main {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens verticalmente */
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    justify-content: center;
+    
+}
+
+.titulo-tabela {
+    color: #678169;
+    background-color: #F4F2E7;
+    
+}
+
+.tabela {
+    width: 70%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    
+}
+
+td {
+    border: white solid 1px;   
+    padding: 4px;
+}
+
+td:first-child {
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px;
+}
+
+td:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.linha-tabela {
+    background: #748976;
+    padding: 15px;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.linha-tabela td {
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    margin: 4%;
+    border-radius: 25px;
+}

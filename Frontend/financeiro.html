@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Veteran Car Club: Financeiro</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Animated-Menu-Icon.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Search-Form.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/financeiro.css">
+</head>
+
+<body style="font-family: Acme, sans-serif;background: rgb(244,242,231);">
+    <div>
+        <nav class="nav navbar navbar-light navbar-expand-md py-3" style="background: #697e6b;height: 75px;">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="./home.html"><span
+                        class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
+                        style="opacity: 0.75;border-radius: 82px;background: url(&quot;assets/img/logo.png&quot;) no-repeat; background-size: contain;"></span><span
+                        style="color: rgb(255,255,255);">VETERAN CAR CLUB</span></a>
+                <div class="collapse navbar-collapse" id="navcol-2">
+                    <form class="search-form"
+                        style="width: 80%;border-top-left-radius: 3px;border-bottom-left-radius: 3px;">
+                        <div class="input-group"
+                            style="background: #748976;border-top-left-radius: 3px;border-bottom-left-radius: 3px;height: 75px;">
+                            <span class="input-group-text"
+                                style="background: rgb(116,137,118);border-width: 0px;border-top-left-radius: 3px;border-bottom-left-radius: 3px;height: 70px;"><i
+                                    class="fa fa-search" style="color: rgb(255,255,255);"></i></span><input
+                                class="form-control form-control-lg" type="text"
+                                style="background: rgb(116,137,118);border-width: 0px;height: 70px;"><button class="btn"
+                                type="button"
+                                style="font-family: Acme, sans-serif;background: #F4F2E7;color: rgb(75,86,76);border-radius: 9px;margin-top: 20px;margin-bottom: 20px;margin-right: 15px;width: 150px;">BUSCAR</button>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav d-lg-flex flex-grow-0 justify-content-between ms-auto">
+                        <li class="nav-item"><img class="avatar"
+                                src="./assets/img/da3a365cc35170667c0f28116bba2027.png" width="45px" height="45px"></li>
+                        <li class="nav-item"><button class="hamburguer" type="button"
+                                style="background: url(&quot;assets/img/8d25886399693859728837b4ed936178.png&quot;) no-repeat, #ffffff00;width: 45px;height: 45px;background-size: contain, auto;border-width: 0px;"></button>
+                        </li>
+                    </ul>
+                    <ul class="nav-list">
+                        <li><a href="./eventos.html">Eventos</a></li>
+                        <li><a href="./membros.html">Membros</a></li>
+                        <li><a href="./veiculos.html">Veículos</a></li>
+                        <li><a href="./cadastrar.html">Cadastrar</a></li>
+                        <li><a href="./financeiro.html">Análise Financeira</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="main text-center">
+        <h1 style="color: rgb(103,129,105);margin: 2%;">ANÁLISE FINANCEIRA</h1>
+
+        <div class="dashboard">
+            <div class="summary-cards">
+                <div class="card">
+                    <div class="card-header">Entrada (R$)</div>
+                    <div class="card-body">7.087,00</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Saída (R$)</div>
+                    <div class="card-body">2.087,00</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Saldo (R$)</div>
+                    <div class="card-body">5.000,00</div>
+                </div>
+            </div>
+            
+            <div class="summary-cards">
+                <div class="card card-invisible"></div>
+                <div class="card">
+                    <div class="card-header">Registrar Transação</div>
+                    <div class="card-body">
+                        <form id="transaction-form">
+                            <div class="mb-3">
+                                <select class="form-select" id="transactionType" required>
+                                    <option value="">Selecionar Tipo</option>
+                                    <option value="Entrada">Entrada</option>
+                                    <option value="Saída">Saída</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="form-control" id="transactionAmount" placeholder="Valor (R$)" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="transactionReason" placeholder="Descrição" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card card-invisible"></div>
+            </div>
+            
+            <div class="charts">
+                <div class="chart-card">
+                    <div class="chart-header">Transações do dia</div>
+                    <div class="chart-body">
+                        <canvas id="dailyTransactionsChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">Transações do ano (2024)</div>
+                    <div class="chart-body">
+                        <canvas id="yearlyTransactionsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/financeiro.js"></script>
+
+</body>
+
+</html>

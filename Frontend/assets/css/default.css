@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background: #697e6b;
+    padding-inline: 16px;
+}
+
+.nav {
+    height: 70px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 22px;
+}
+
+.titulo {
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-list a {
+    font-size: 24px;
+    opacity: 0;
+    color: #fff;
+    cursor: pointer;
+
+    padding: 23px;
+    padding-left: 65px;
+    padding-right: 65px;
+
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    
+}
+
+.nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+}
+.nav-list li:nth-child(2) a {
+    transition: 0.5s 0.3s;
+}
+.nav-list li:nth-child(3) a {
+    transition: 0.5s 0.4s;
+}
+.nav-list li:nth-child(4) a {
+    transition: 0.5s 0.5s;
+}
+.nav-list li:nth-child(5) a {
+    transition: 0.5s 0.6s;
+}
+.nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 500px;
+    height: 100vh;
+    background: #697e6b;
+    transition: right 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.nav.active .nav-list {
+    right: 0;
+    pointer-events: auto;
+}
+
+.nav.active .nav-list a {
+    opacity: 1;
+}
+
+.avatar {
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+
+.hamburguer {
+    position: fixed;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    z-index: 999;
+}
+
+.pesquisar {
+    background: #748976;
+    padding: 25px;
+    height: 70px;
+
+    border-radius: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.procurar {
+    border: none;
+    background: #748976;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.procurar:focus {
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.lupa {
+    width: 28px;
+    height: 28px;
+    margin-top: 5%;
+}
+
+.buscar {
+    color: #4B564C;
+    background: #F4F2E7;
+    border: none;
+    padding: 15px;
+    
+    border-radius: 8px;
+}

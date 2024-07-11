@@ -1,0 +1,24 @@
+h1 {
+    color: #678169;
+    margin-left: 5%;
+}
+
+.eventos {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.card {
+
+    padding: 25px;
+    background-color: #697E6B;
+    color: #F4F2E7;
+}
+
+.card-img-fixed {
+    height: 400px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+    width: 100%;
+}
