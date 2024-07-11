@@ -7,6 +7,10 @@ import express from "express"
 import cors from "cors"
 import db from "./config/database.js"
 
+import Eventos from './Models/modelEventos.js'
+import Finaceiro from './Models/modelFinanceiro.js'
+import Membro from './Models/modelMembros.js'
+import Veiculos from './Models/modelVeiculos.js'
 
 const app = express();
 app.use(bodyParser.json());
@@ -19,6 +23,13 @@ try {
     console.log("Conexão com o MySQL NÃO estabelecida!", error)
 }
 
+ Membro.associate = (models) => {
+    Veiculos.hasMany(models.Veiculos, 
+        { foreignKey: 'matr_professor', as: 'professores'})
+
+    Curso.hasMany(models.Turma, 
+        { foreignKey: 'id_turma', as: 'turmas'})    
+} 
 
 
 

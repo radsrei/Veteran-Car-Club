@@ -1,9 +1,20 @@
-const mongoose = require('mongoose');
+import { Sequelize } from "sequelize";
+import db from "../config/database.js"
 
-const FinanceiroSchema = new mongoose.Schema({
-    entrada: Number,
-    saida: Number,
-    descricao: String,
+
+const Financeiro = db.define('financeiro',{
+    movimento: {
+        type : Sequelize.DECIMAL(10,2)
+    },
+    saldo: {
+        type : Sequelize.DECIMAL(10,2)
+    },
+    descricao: {
+        type: Sequelize.STRING(100)
+    },
+    data:  {
+        type: Sequelize.DATE
+    },
 });
 
-module.exports = mongoose.model('Event', FinanceiroSchema);
+export default Financeiro

@@ -1,13 +1,33 @@
-const mongoose = require('mongoose');
+import { Sequelize } from "sequelize";
+import db from "../config/database.js"
 
-const MembroSchema = new mongoose.Schema({
-    nome: String,
-    email: String,
-    telefone: String,
-    endereco: String,
-    dataDeNascimento: Date,
-    CPF: String,
-    CEP: String,
+const Membro = db.define('membro',{
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true
+    },
+    nome:{
+        type: Sequelize.STRING(100)
+    },
+    email: {
+        type: Sequelize.STRING(100)
+    },
+    telefone: {
+        type: Sequelize.STRING(100)
+    },
+    endereco: {
+        type: Sequelize.STRING(100)
+    },
+    dataDeNascimento: {
+        type: Sequelize.DATE
+    },
+    CPF: {
+        type: Sequelize.STRING(100)
+    },
+    CEP: {
+        type: Sequelize.STRING(100)
+
+    },
 });
 
-module.exports = mongoose.model('Event', MembroSchema);
+export default Membro
